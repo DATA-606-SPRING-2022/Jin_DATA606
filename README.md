@@ -70,6 +70,8 @@ I plan to use the Cosine similarity model, Matrix Factorization, KNN. Besides, N
 ## Outcomes
 #### What outcomes do you intend to achieve (better understanding of problems, tools to help solve problems, predictive analytics with practicle applications, etc)?
 
+I intend to achieve through this project is to developed product recommender systems/models that can accurately predict customers' preferences, identify the most useful characteristics to promote certain products to customers, understand the role of text data in recommender systems, and provide a comprehensive report of recommender systems for the business owners.
+
 ## References
 Jianmo Ni, Jiacheng Li, Julian McAuley
 Empirical Methods in Natural Language Processing (EMNLP), 2019 
