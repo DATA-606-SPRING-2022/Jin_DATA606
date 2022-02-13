@@ -76,3 +76,5 @@ I intend to achieve through this project is to develop product recommender syste
 Jianmo Ni, Jiacheng Li, Julian McAuley
 Empirical Methods in Natural Language Processing (EMNLP), 2019 
 http://cseweb.ucsd.edu/~jmcauley/pdfs/emnlp19a.pdf
+
+Doshi, S. (2019, February 20). Brief on Recommender Systems. Medium. Retrieved February 13, 2022, from https://towardsdatascience.com/brief-on-recommender-systems-b86a1068a4dd 
