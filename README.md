@@ -21,6 +21,8 @@ The objective of this project is to analyze the reason for a product to be recom
 
 The data for this project is the Amazon Review Data (2018) which is collected by the University of California San Diego (https://nijianmo.github.io/amazon/index.html). The dataset includes reviews (rating, text, helpfulness votes), product metadata (descriptions, category information, price, brand, and image features). It contains a total number of 233.1 million real reviews with the size of 34 gigabytes from Amazon. I would use a subset of this data due to the computing resource limitation. The smaller dataset is the subset of the data in which all users and items have at least 5 reviews. 
 
+The smaller dataset might result in a lack of sufficient data for building a Collaborative Filtering model because it requires a large amount of purchase history for the same product to generate recommendations. In that case, I might use the full review dataset but with the rating feature only to resolve the computing power issue.
+
 Data format:
 
 Review data
