@@ -60,7 +60,7 @@ The unit of analysis for this project is the users and the products of the Amazo
 
 ## Methods
 #### What variables/measures do you plan to use in your analysis (variables should be tied to the questions in #3)?
-
+<img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/1b097dfdc090190d40de3d6630db78395774dd96/img/filtering%20models.png">
 I plan to use both Content-based Filtering and Collaborative Filtering for the product recommender systems in this project. For Content-based Filtering, the variables should be the product metadata like feature, description, price, brand, and categories. For Collaborative Filtering, more variables from the review data should be used, such as overall rating, reviewText, and summary.
 
 #### What kinds of techniques/models do you plan to use (for example, clustering, NLP, ARIMA, etc.)? How do you plan to develop/apply ML and how you evaluate/compare the performance of the models?
