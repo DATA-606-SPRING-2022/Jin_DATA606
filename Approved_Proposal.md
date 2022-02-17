@@ -60,12 +60,18 @@ The unit of analysis for this project is the users and the products of the Amazo
 
 ## Methods
 #### What variables/measures do you plan to use in your analysis (variables should be tied to the questions in #3)?
-
+<img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/a6ee80eaec6256a12c862313fecd70ae936a65ef/images/filtering%20models.png">
 I plan to use both Content-based Filtering and Collaborative Filtering for the product recommender systems in this project. For Content-based Filtering, the variables should be the product metadata like feature, description, price, brand, and categories. For Collaborative Filtering, more variables from the review data should be used, such as overall rating, reviewText, and summary.
 
 #### What kinds of techniques/models do you plan to use (for example, clustering, NLP, ARIMA, etc.)? How do you plan to develop/apply ML and how you evaluate/compare the performance of the models?
 
 I plan to use the Cosine similarity model, Matrix Factorization, KNN. Besides, NLP models like TF-IDF, Naive Bayes, LSTM could be used against the text data. For evaluate/compare the performance of the models, I plan to apply Root Mean Squared Error (RMSE) and Decision support metrics (Precision, Recall, F1).
+
+For Content-based Filtering, I will apply the cosine similarity method against the product metadata to identify the similar products for the given one. The main feature that will be used for this model is from the product metadata like description, price, salesRank, brand, categories, and product features. Since some of them are textual data, NLP techniques like tokenization and TF-IDF vectorization will be applied. 
+
+For Collaborative Filtering, I will apply the matrix factorization method against the review data. The main feature that will be used for this approach is from the review data like user id, product id, and the rating score. To perform matrix analysis, the cosine similarity method could be applied again, and several machine learning algorithms will be used such as KNN and Singular value decomposition (SVD). KNN can group users into a cluster and only consider the same cluster user for product recommendation. SVD can break down a matrix into the product of a few smaller matrices to reveal the user connections and to discover relationships between items. Moreover, deep learning techniques could also be applied for Collborative Filtering, Neural Network method can take the user-item matrix or review textual data for predicting a score for recommending.
+
+The above two types of filtering have their own drawbacks such as the novelty problem of Content-based Filtering and the cold start problem of Collaborative Filtering, so in reality, more robust recommender systems like hybrid recommenders are often used. I plan to build a hybrid recommender that combines Content-based Filtering and Collaborative Filtering to overcome the drawbacks and improve overall performance.
 
 ## Outcomes
 #### What outcomes do you intend to achieve (better understanding of problems, tools to help solve problems, predictive analytics with practicle applications, etc)?
@@ -76,3 +82,5 @@ I intend to achieve through this project is to develop product recommender syste
 Jianmo Ni, Jiacheng Li, Julian McAuley
 Empirical Methods in Natural Language Processing (EMNLP), 2019 
 http://cseweb.ucsd.edu/~jmcauley/pdfs/emnlp19a.pdf
+
+Doshi, S. (2019, February 20). Brief on Recommender Systems. Medium. Retrieved February 13, 2022, from https://towardsdatascience.com/brief-on-recommender-systems-b86a1068a4dd 
