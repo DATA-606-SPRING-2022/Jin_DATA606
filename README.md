@@ -61,7 +61,16 @@ Below is the list of the ranking of most reviewed products and their average rat
   <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/07e65b0c76686b1e612ef3aa0f26c56e47026c69/images/2nd_product.png" width="420" /> 
 </p>
 
+The product text distribution histogram and box plot show that majority of the product text is less than 1000 words.
+<p float="left">
+  <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/9b4cb651e7e430486faa681c4e48af5d358d6fc6/images/product_text.png" width="550" />
+  <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/9b4cb651e7e430486faa681c4e48af5d358d6fc6/images/product_text_boxplot.png" width="450" /> 
+</p>
 
+Besides, the word cloud shows that the most frequently used words for Appliances products are related to replacement, part, and model number.
+
+<img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/9b4cb651e7e430486faa681c4e48af5d358d6fc6/images/product_wordcloud.png" /> 
+          
 ## References
 Jianmo Ni, Jiacheng Li, Julian McAuley
 Empirical Methods in Natural Language Processing (EMNLP), 2019 
