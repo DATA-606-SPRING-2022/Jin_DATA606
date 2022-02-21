@@ -17,7 +17,7 @@ The data for this project is the Amazon Review Data (2018) which is collected by
 
 ## Exploratory Data Analysis
 
-For this project, I choose the Appliance category from the entire Amazon review dataset because it has a moderate number of review and product records. This section summarize the EDA for the datasets, for more a comprehensive demonstration and visualization, please use the EDA notebook (https://github.com/JinHuiXu1991/Jin_DATA606/blob/dcbf6d71c8a12ea498c7943c09cacdee08705d3f/ipynb/DATA606_Part1.ipynb)
+For this project, I choose the Appliance category from the entire Amazon review dataset because it has a moderate number of review and product records. This section summarize the EDA for the datasets, for a more comprehensive demonstration and visualization, please use the EDA notebook at https://github.com/JinHuiXu1991/Jin_DATA606/blob/dcbf6d71c8a12ea498c7943c09cacdee08705d3f/ipynb/DATA606_Part1.ipynb
 
 ### Review Data
 There are a total of 602,777 review records in this category, and the dataset has 12 different features.
@@ -47,6 +47,20 @@ Most of the reviews contain less than 100 words. The word counts distributions f
 ### Product Data
 
 There are a total of 30,445 product records in this category, and the dataset has 19 different features.
+
+In the product dataset, the majority of the products (64.6%) are in the Tools & Home Improvement category, and the Appliances category also holds 21.5% in the dataset. In additiion, there are a total of 2,762 brands, and Whirlpool is at the rank 1 position of amount of products.
+
+<img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/07e65b0c76686b1e612ef3aa0f26c56e47026c69/images/product_cat.png">
+<img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/07e65b0c76686b1e612ef3aa0f26c56e47026c69/images/product_brand.png">
+
+Below is the list of the ranking of most reviewed products and their average ratings. Among 30,445 Appliances products, there are only 30,252 products were reviewed. Within this list, the most reviewed product is General Electric MWF Refrigerator Water Filter, and the second most reviewed product is Samsung Genuine DA29-00020B Refrigerator Water Filter, 3 Pack. Both of them are Refrigerator Water Filters.
+
+<p float="left">
+  <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/07e65b0c76686b1e612ef3aa0f26c56e47026c69/images/product_counts.png" width="250" />
+  <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/07e65b0c76686b1e612ef3aa0f26c56e47026c69/images/1st_product.png" width="320" /> 
+  <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/07e65b0c76686b1e612ef3aa0f26c56e47026c69/images/2nd_product.png" width="420" /> 
+</p>
+
 
 ## References
 Jianmo Ni, Jiacheng Li, Julian McAuley
