@@ -15,9 +15,12 @@ The objective of this project is to analyze the reason for a product to be recom
 
 The data for this project is the Amazon Review Data (2018) which is collected by the University of California San Diego (https://nijianmo.github.io/amazon/index.html). The dataset includes reviews (rating, text, helpfulness votes), product metadata (descriptions, category information, price, brand, and image features). It contains a total number of 233.1 million real reviews with the size of 34 gigabytes from Amazon. I would use a subset of this data due to the computing resource limitation. The smaller dataset is the subset of the data in a specific domain/category.
 
-## EDA
+## Exploratory Data Analysis
 
-For this project, I choose the Appliance category from the entire Amazon review dataset because it has a moderate number of review and product records. There are a total of 602,777 review records in this category, and the dataset has 12 different features.
+For this project, I choose the Appliance category from the entire Amazon review dataset because it has a moderate number of review and product records. This section summarize the EDA for the datasets, for more a comprehensive demonstration and visualization, please use the EDA notebook (https://github.com/JinHuiXu1991/Jin_DATA606/blob/dcbf6d71c8a12ea498c7943c09cacdee08705d3f/ipynb/DATA606_Part1.ipynb)
+
+### Review Data
+There are a total of 602,777 review records in this category, and the dataset has 12 different features.
 
 The rating distribution graphs show that the overall ratings in this review data set are highly imbalanced, which contains more than 69% of 5 stars rating.
 
@@ -40,6 +43,10 @@ Most of the reviews contain less than 100 words. The word counts distributions f
   <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/ee921b2d64cc56a03b8bdb0fec45b46f1f6346e8/images/review_word_distrubution.png" width="550" />
   <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/ee921b2d64cc56a03b8bdb0fec45b46f1f6346e8/images/review_text_length_by_rating.png" width="450" /> 
 </p>
+
+### Product Data
+
+There are a total of 30,445 product records in this category, and the dataset has 19 different features.
 
 ## References
 Jianmo Ni, Jiacheng Li, Julian McAuley
