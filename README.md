@@ -106,6 +106,21 @@ There are a total of 30,445 product records in this category, and the dataset ha
 
   <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/9b4cb651e7e430486faa681c4e48af5d358d6fc6/images/product_wordcloud.png" /> 
 
+### Merged Data
+
+To find out more insights within this dataset, we can merge the cleaned review and product datasets.
+
+* Most Reviewed Brands Distributions (top 10) graphs show that Whirlpool products have the rank 1 position of amount of reviews. However, there are some other brands in the list that are not in the list of top 10 product numbers, which means offering more products doesn't imply more purchasing and revenue.
+
+  <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/d1cad2dbfd4938c5db634e5c8ad83e92b0783edc/images/most_reviewed_brand.png" /> 
+
+* Besides, the below table shows the top 10 average rating brand (reviews > 5000) in the dataset. There are many brand only have a few reviews, and their average rating will definitely be higher than other brands with more reviews, so we only consider the brands with at least 5,000 reviews for this analysis.
+
+  <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/d1cad2dbfd4938c5db634e5c8ad83e92b0783edc/images/highest_rating_brand.png" /> 
+  
+  The result show that brand LintEater has the highest average rating 4.62 with over 6,000 reviews.
+  Whereas Whirlpool has the rank 4 in this list, it also has the most review number and most products offered in the Appliance category. It means Whirlpool is doing great in   offering both overall product quality and quantity.
+
 ## Methods
 #### What variables/measures do you plan to use in your analysis (variables should be tied to the questions in #3)?
 <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/a6ee80eaec6256a12c862313fecd70ae936a65ef/images/filtering%20models.png">
