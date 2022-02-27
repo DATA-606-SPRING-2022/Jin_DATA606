@@ -2,6 +2,21 @@
 ### Jin Hui Xu
 ### DATA606 Capstone Project
 
+### PowerPoint presentation - <a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/2def288e220758e429219f0b2adde8b4a051fb07/ipynb/DATA606_Part1.ipynb">PowerPoint Presentation link</a>
+
+## Contents
+- [Introduction](#introduction)
+- [Research Questions](#research-questions)
+- [Data](#data)
+- [Exploratory Data Analysis](#exploratory-data-analysis)
+  - [Review Data](#review-data)
+  - [Product Data](#product-data)
+  - [Merged Data](#merged-data)
+  - Notebook: <a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/2def288e220758e429219f0b2adde8b4a051fb07/ipynb/DATA606_Part1.ipynb">EDA notebook link</a>
+- [Methods](#methods)
+- [Outcomes](#outcomes)
+- [References](#references)
+
 ## Introduction
 
 As E-commerce becomes more and more popular in recent years, especially by the impact of the COVID-19 pandemic, many retailers and companies are switching their business models to adapt to the trend. In addition, with the rapid growth of big data technology, the cost of storage capacity to store enormous amounts of data from customers and visitors on the E-commerce sites decreases gradually. No matter the tech giant or start-up, all companies can make use of the gathered data to boost their business success to the next level.
@@ -52,7 +67,7 @@ Product Metadata
 
 ## Exploratory Data Analysis
 
-For this project, I choose the Appliance category from the entire Amazon review dataset because it has a moderate number of review and product records. This section summarize the EDA for the datasets. For a more comprehensive demonstration and visualization, please use the EDA notebook at <a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/2def288e220758e429219f0b2adde8b4a051fb07/ipynb/DATA606_Part1.ipynb">EDA notebook link</a> with the PowerPoint presentation slides at <a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/2def288e220758e429219f0b2adde8b4a051fb07/ipynb/DATA606_Part1.ipynb">PowerPoint Presentation link</a>.
+For this project, I choose the Appliance category from the entire Amazon review dataset because it has a moderate number of review and product records. This section summarize the EDA for the datasets. For a more comprehensive demonstration and visualization, please use the EDA notebook at <a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/2def288e220758e429219f0b2adde8b4a051fb07/ipynb/DATA606_Part1.ipynb">EDA notebook link</a>.
 
 ### Review Data
 There are a total of 602,777 review records in this category, and the dataset has 12 different features.
