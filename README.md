@@ -43,7 +43,8 @@ Review data
 
 Product Metadata
 
-![image](https://user-images.githubusercontent.com/24414472/155895573-d30bd194-5eea-4954-ab2e-327431369e3b.png)
+![image](https://user-images.githubusercontent.com/24414472/155896882-c7df8c3e-9dc4-4f1a-9a52-99497766c5ff.png)
+
 
 
 ## Exploratory Data Analysis
