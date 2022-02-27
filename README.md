@@ -42,20 +42,9 @@ Review data
 
 
 Product Metadata
-* asin - ID of the product, e.g. 0000031852
-* title - name of the product
-* feature - bullet-point format features of the product
-* description - description of the product
-* price - price in US dollars (at time of crawl)
-* imageURL - url of the product image
-* imageURL - url of the high resolution product image
-* related - related products (also bought, also viewed, bought together, buy after viewing)
-* salesRank - sales rank information
-* brand - brand name
-* categories - list of categories the product belongs to
-* tech1 - the first technical detail table of the product
-* tech2 - the second technical detail table of the product
-* similar - similar product table
+
+![image](https://user-images.githubusercontent.com/24414472/155895573-d30bd194-5eea-4954-ab2e-327431369e3b.png)
+
 
 ## Exploratory Data Analysis
 
