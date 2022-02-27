@@ -2,7 +2,7 @@
 ### Jin Hui Xu
 ### DATA606 Capstone Project
 
-### PowerPoint presentation - <a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/92a8591a599936073c53b06474798432e548ea63/presentation/Project_Presentation_EDA_v1.1.pptx">PowerPoint Presentation Link</a>
+### PowerPoint presentation - <a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/6b54bfbf6db39c300e6c0e9be89f1598b5abb49e/presentation/Project_Presentation_EDA_v1.1.pptx">PowerPoint Presentation Link</a>
 
 ## Contents
 - [Introduction](#introduction)
@@ -12,7 +12,7 @@
   - [Review Data](#review-data)
   - [Product Data](#product-data)
   - [Merged Data](#merged-data)
-  - Notebook: <a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/3c0ca7c149df15271bfd4d53806edc919f5fdcab/ipynb/DATA606_Part1.ipynb">EDA Notebook Link</a>
+  - Notebook: <a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/6b54bfbf6db39c300e6c0e9be89f1598b5abb49e/ipynb/DATA606_Part1.ipynb">EDA Notebook Link</a>
 - [Methods](#methods)
 - [Outcomes](#outcomes)
 - [References](#references)
@@ -49,7 +49,7 @@ Product Metadata
 
 ## Exploratory Data Analysis
 
-For this project, I choose the Appliance category from the entire Amazon review dataset because it has a moderate number of review and product records. This section summarize the EDA for the datasets. For a more comprehensive demonstration and visualization, please use the EDA notebook at <a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/3c0ca7c149df15271bfd4d53806edc919f5fdcab/ipynb/DATA606_Part1.ipynb">EDA Notebook Link</a>.
+For this project, I choose the Appliance category from the entire Amazon review dataset because it has a moderate number of review and product records. This section summarize the EDA for the datasets. For a more comprehensive demonstration and visualization, please use the EDA notebook at <a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/6b54bfbf6db39c300e6c0e9be89f1598b5abb49e/ipynb/DATA606_Part1.ipynb">EDA Notebook Link</a>.
 
 ### Review Data
 There are a total of 602,777 review records in this category, and the dataset has 12 different features.
@@ -133,10 +133,16 @@ For Collaborative Filtering, I will apply the matrix factorization method agains
 
 The above two types of filtering have their own drawbacks such as the novelty problem of Content-based Filtering and the cold start problem of Collaborative Filtering, so in reality, more robust recommender systems like hybrid recommenders are often used. I plan to build a hybrid recommender that combines Content-based Filtering and Collaborative Filtering to overcome the drawbacks and improve overall performance.
 
+### System Integration/Deployment
+
+For recommendation system integration and deployment. I would like to develop a user interface for better using experience. I will develop a Flask website and use PythonAnywhere web hosting service to host our recommender system. Next, I will develop a Chabot using DialogFlow platform to assist users for product recommendation and integrate it with the Flask website.
+
+
+
 ## Outcomes
 #### What outcomes do you intend to achieve (better understanding of problems, tools to help solve problems, predictive analytics with practicle applications, etc)?
 
-I intend to achieve through this project is to develop product recommender systems/models that can accurately predict customers' preferences, identify the most useful characteristics to promote certain products to customers, understand the role of text data in recommender systems, and provide a comprehensive report of recommender systems for the business owners.
+I intend to achieve through this project is to develop product recommender systems/models that can accurately predict customers' preferences, identify the most useful characteristics to promote certain products to customers, understand the role of text data in recommender systems, provide a website and Chatbot to assist amazon users to make purchase decisions, and provide a comprehensive report of recommender systems for the business owners.
 
 ## References
 Jianmo Ni, Jiacheng Li, Julian McAuley
