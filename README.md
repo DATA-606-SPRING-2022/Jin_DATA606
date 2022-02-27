@@ -2,7 +2,7 @@
 ### Jin Hui Xu
 ### DATA606 Capstone Project
 
-### PowerPoint presentation - <a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/e6b6aad2a1fd08ac8cd4e79f1329d7f2340630f8/presentation/Project_Presentation_EDA_v1.1.pptx">PowerPoint Presentation Link</a>
+### PowerPoint presentation - <a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/92a8591a599936073c53b06474798432e548ea63/presentation/Project_Presentation_EDA_v1.1.pptx">PowerPoint Presentation Link</a>
 
 ## Contents
 - [Introduction](#introduction)
