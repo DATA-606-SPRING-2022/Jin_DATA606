@@ -2,7 +2,7 @@
 ### Jin Hui Xu
 ### DATA606 Capstone Project
 
-### PowerPoint presentation - <a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/2def288e220758e429219f0b2adde8b4a051fb07/ipynb/DATA606_Part1.ipynb">PowerPoint Presentation link</a>
+### PowerPoint presentation - <a href="">PowerPoint Presentation link</a>
 
 ## Contents
 - [Introduction](#introduction)
