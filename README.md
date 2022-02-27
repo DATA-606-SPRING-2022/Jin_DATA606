@@ -52,7 +52,7 @@ Product Metadata
 
 ## Exploratory Data Analysis
 
-For this project, I choose the Appliance category from the entire Amazon review dataset because it has a moderate number of review and product records. This section summarize the EDA for the datasets, for a more comprehensive demonstration and visualization, please use the EDA notebook at <a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/2def288e220758e429219f0b2adde8b4a051fb07/ipynb/DATA606_Part1.ipynb">EDA notebook link</a>.
+For this project, I choose the Appliance category from the entire Amazon review dataset because it has a moderate number of review and product records. This section summarize the EDA for the datasets. For a more comprehensive demonstration and visualization, please use the EDA notebook at <a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/2def288e220758e429219f0b2adde8b4a051fb07/ipynb/DATA606_Part1.ipynb">EDA notebook link</a> with the PowerPoint presentation slides at <a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/2def288e220758e429219f0b2adde8b4a051fb07/ipynb/DATA606_Part1.ipynb">PowerPoint Presentation link</a>.
 
 ### Review Data
 There are a total of 602,777 review records in this category, and the dataset has 12 different features.
