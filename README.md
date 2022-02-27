@@ -38,7 +38,7 @@ Data format:
 
 Review data
 
-![image](https://user-images.githubusercontent.com/24414472/155895368-01992ac8-3aa5-4708-8ac1-f4bb30878aa6.png)
+![image](https://user-images.githubusercontent.com/24414472/155896401-fcd6c4d8-ce08-4a9c-b431-71b6d9a15331.png)
 
 
 Product Metadata
