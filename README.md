@@ -107,7 +107,7 @@ There are a total of 30,445 product records in this category, and the dataset ha
 
 To find out more insights within this dataset, we can merge the cleaned review and product datasets.
 
-* Most Reviewed Brands Distributions (top 10) graphs show that Whirlpool products have the rank 1 position of amount of reviews. However, there are some other brands in the list that are not in the list of top 10 product numbers, which means offering more products doesn't imply more purchasing and revenue.
+* Most Reviewed Brands Distributions (top 10) graphs show that Whirlpool products have the rank 1 position of amount of reviews. However, there are some other brands in the list that are not in the list of top 10 product numbers, which means offering more products doesn't imply more sales and revenue.
 
   <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/d1cad2dbfd4938c5db634e5c8ad83e92b0783edc/images/most_reviewed_brand.png" /> 
 
