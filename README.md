@@ -12,7 +12,7 @@
   - [Review Data](#review-data)
   - [Product Data](#product-data)
   - [Merged Data](#merged-data)
-  - Notebook: <a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/2def288e220758e429219f0b2adde8b4a051fb07/ipynb/DATA606_Part1.ipynb">EDA Notebook Link</a>
+  - Notebook: <a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/3c0ca7c149df15271bfd4d53806edc919f5fdcab/ipynb/DATA606_Part1.ipynb">EDA Notebook Link</a>
 - [Methods](#methods)
 - [Outcomes](#outcomes)
 - [References](#references)
@@ -49,7 +49,7 @@ Product Metadata
 
 ## Exploratory Data Analysis
 
-For this project, I choose the Appliance category from the entire Amazon review dataset because it has a moderate number of review and product records. This section summarize the EDA for the datasets. For a more comprehensive demonstration and visualization, please use the EDA notebook at <a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/2def288e220758e429219f0b2adde8b4a051fb07/ipynb/DATA606_Part1.ipynb">EDA Notebook Link</a>.
+For this project, I choose the Appliance category from the entire Amazon review dataset because it has a moderate number of review and product records. This section summarize the EDA for the datasets. For a more comprehensive demonstration and visualization, please use the EDA notebook at <a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/3c0ca7c149df15271bfd4d53806edc919f5fdcab/ipynb/DATA606_Part1.ipynb">EDA Notebook Link</a>.
 
 ### Review Data
 There are a total of 602,777 review records in this category, and the dataset has 12 different features.
