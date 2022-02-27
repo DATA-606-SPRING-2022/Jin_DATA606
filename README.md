@@ -56,7 +56,7 @@ There are a total of 602,777 review records in this category, and the dataset ha
 
 * The rating distribution graphs show that the overall ratings in this review data set are highly imbalanced, which contains more than 69% of 5 stars rating.
 
-  <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/dcbf6d71c8a12ea498c7943c09cacdee08705d3f/images/review_rating.png">
+  <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/4114c99e48091ce7e54e73a081260acecd225a0e/images/review_rating.png">
 
   Thus, in the following model development, we need to keep in mind that the accuracy metric may not be useful for evaluating the machine learning models; instead, precision, recall, and F1 score values could be suitable for model evaluation.
 
