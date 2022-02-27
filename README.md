@@ -37,17 +37,9 @@ The data for this project is the Amazon Review Data (2018) which is collected by
 Data format:
 
 Review data
-* reviewerID - ID of the reviewer, e.g. A2SUAM1J3GNN3B
-* asin - ID of the product, e.g. 0000013714
-* reviewerName - name of the reviewer
-* vote - helpful votes of the review
-* style - a disctionary of the product metadata, e.g., "Format" is "Hardcover"
-* reviewText - text of the review
-* overall - rating of the product
-* summary - summary of the review
-* unixReviewTime - time of the review (unix time)
-* reviewTime - time of the review (raw)
-* image - images that users post after they have received the product
+
+![image](https://user-images.githubusercontent.com/24414472/155895368-01992ac8-3aa5-4708-8ac1-f4bb30878aa6.png)
+
 
 Product Metadata
 * asin - ID of the product, e.g. 0000031852
