@@ -79,7 +79,7 @@ There are a total of 602,777 review records in this category, and the dataset ha
 
 There are a total of 30,445 product records in this category, and the dataset has 19 different features.
 
-* In the product dataset, the majority of the products (64.6%) are in the Tools & Home Improvement category, and the Appliances category also holds 21.5% in the dataset. In additiion, there are a total of 2,762 brands, and Whirlpool is at the rank 1 position of amount of products.
+* In the product dataset, the majority of the products (64.6%) are in the Tools & Home Improvement category, and the Appliances category also holds 21.5% in the dataset. In addition, there are a total of 2,762 brands, and Whirlpool is at the rank 1 position of amount of products.
 
   <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/07e65b0c76686b1e612ef3aa0f26c56e47026c69/images/product_cat.png">
   <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/07e65b0c76686b1e612ef3aa0f26c56e47026c69/images/product_brand.png">
