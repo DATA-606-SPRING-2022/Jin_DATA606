@@ -10,6 +10,10 @@ In order to better understand the customers' behavior and enhance their shopping
 
 The objective of this project is to analyze the reason for a product to be recommended and explore different data science methods and algorithms to implement product recommender systems. It will provide business owners or start-up companies a better idea of how recommender systems work and the related advantages.
 
+## Research Questions
+* What characteristics are useful to generate personalized recommendations?
+* Which recommender systems algorithms/methods are most successful and practical?
+* Can text data improve recommender systems' performance?
 
 ## Data
 
