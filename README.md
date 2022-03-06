@@ -142,6 +142,8 @@ For recommendation system integration and deployment. I would like to develop a 
 
 The website prototype is hosted at: https://data606project.pythonanywhere.com/
 
+<img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/5372ca212bb22ae73cb18cda93816a1cee8dd288/images/flask_prototype.png" /> 
+
 ## Outcomes
 #### What outcomes do you intend to achieve (better understanding of problems, tools to help solve problems, predictive analytics with practicle applications, etc)?
 
