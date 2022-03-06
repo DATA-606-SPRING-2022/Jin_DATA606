@@ -2,9 +2,10 @@
 ### Jin Hui Xu
 ### DATA606 Capstone Project
 
-### PowerPoint presentation - <a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/452c596826633f6a1844baf169bd76548c6f4245/presentation/Project_Presentation_EDA_v1.1.pptx">PowerPoint Presentation Link</a>
-
 ## Contents
+- Presentation
+  - PowerPoint presentation - <a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/91196c7dcabf7b5091919360366d4882778129a2/presentation/Project_Presentation_EDA_v1.1.pptx">PowerPoint Presentation Link</a>
+  - Video presentation - <a href="">Youtube Presentation Link</a>
 - [Introduction](#introduction)
 - [Research Questions](#research-questions)
 - [Data](#data)
@@ -12,7 +13,7 @@
   - [Review Data](#review-data)
   - [Product Data](#product-data)
   - [Merged Data](#merged-data)
-  - Notebook: <a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/6b54bfbf6db39c300e6c0e9be89f1598b5abb49e/ipynb/DATA606_Part1.ipynb">EDA Notebook Link</a>
+  - Notebook - <a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/6b54bfbf6db39c300e6c0e9be89f1598b5abb49e/ipynb/DATA606_Part1.ipynb">EDA Notebook Link</a>
 - [Methods](#methods)
 - [Outcomes](#outcomes)
 - [References](#references)
