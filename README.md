@@ -4,8 +4,8 @@
 
 ## Contents
 - Presentation
-  - PowerPoint presentation - <a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/91196c7dcabf7b5091919360366d4882778129a2/presentation/Project_Presentation_EDA_v1.1.pptx">PowerPoint Presentation Link</a>
-  - Video presentation - <a href="">Youtube Presentation Link</a>
+  - PowerPoint presentation - <a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/05145b7b246b2f9bbba06f11ce1d5c85db1315ce/presentation/Project_Presentation_EDA_v1.1.pptx">PowerPoint Presentation Link</a>
+  - Video presentation - <a href="https://youtu.be/sDxbj2RG-58">Youtube Presentation Link</a>
 - [Introduction](#introduction)
 - [Research Questions](#research-questions)
 - [Data](#data)
