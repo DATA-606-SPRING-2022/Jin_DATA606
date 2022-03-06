@@ -16,6 +16,7 @@
   - Notebook - <a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/6b54bfbf6db39c300e6c0e9be89f1598b5abb49e/ipynb/DATA606_Part1.ipynb">EDA Notebook Link</a>
 - [Methods](#methods)
 - [System Integration/Deployment](#system-integrationdeployment)
+  - Recommender Website - <a href="https://data606project.pythonanywhere.com/" target="_blank">Prototype Link</a>
 - [Outcomes](#outcomes)
 - [References](#references)
 
