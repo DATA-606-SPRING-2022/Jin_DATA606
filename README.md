@@ -153,3 +153,9 @@ Empirical Methods in Natural Language Processing (EMNLP), 2019
 http://cseweb.ucsd.edu/~jmcauley/pdfs/emnlp19a.pdf
 
 Doshi, S. (2019, February 20). Brief on Recommender Systems. Medium. Retrieved February 13, 2022, from https://towardsdatascience.com/brief-on-recommender-systems-b86a1068a4dd 
+
+Engineering@ZenOfAI. (2019, August 7). Creating chatbot with Webhooks using python (FLASK) and dialogflow. Medium. Retrieved March 5, 2022, from https://medium.com/zenofai/creating-chatbot-using-python-flask-d6947d8ef805
+
+BANIK, R. O. U. N. A. K. (2018). Hands-on recommendation systems with Python: Start building powerful and personalized, ... recommendation engines with python. PACKT Publishing Limited. 
+
+
