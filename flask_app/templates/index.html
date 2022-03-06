@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+
+
+
+  <head>
+      <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <title>Amazon Recommender</title>
+    <div style="background: url(https://cdn.pixabay.com/photo/2015/10/29/14/38/web-1012467_960_720.jpg); background-size: cover;" class="bg-cover">
+      <div class="container py-1">
+        <header class="text-center text-white py-1">
+          <h1 class="font-weight-bold">Amazon Appliances Product Recommender</h1>
+        </header>
+      </div>
+        <nav class="navbar navbar-expand-sm navbar-dark" style="background: #000000;opacity: 0.5;">
+          <a class="navbar-brand" href="#"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse navbar-left" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+              <li {% if request.path == '/' %}class="active nav-item" {% else %}class="nav-item" {% endif %} >
+                <a class="nav-link text-white" href="/">Home</a>
+              </li>
+              <li {% if request.path == '/about' %}class="active nav-item" {% else %}class="nav-item" {% endif %} >
+                <a class="nav-link text-white" href="/about">About</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+    </div>
+
+
+  </head>
+  <body>
+
+      <div class="container-fluid h-100" style="background: url(https://www.desktopbackground.org/download/1920x1080/2012/10/22/471786_professional-background-images-for-websites-all-wallpapers-new_1920x1237_h.jpg); background-size: cover;">
+        <div class="container" style="  padding-top: 20px; opacity: .9;">
+            <div class="col-md-8 col-sm-12 mx-auto" >
+                <div class="h-100 justify-content-center chatbox">
+                    <div class="chat-container" style="overflow: auto; max-height: 80vh">
+                        <!-- chat messages -->
+                        <div class="chat-message col-md-5 offset-md-7 bot-message">
+                            <p id="datenow"></p>
+                            <p>Welcome to Amazon Product Recommender System. How can I help you?<p>
+                        </div>
+                    </div>
+                    <form id="target">
+                        <div class="input-group">
+                            <input class="form-control" type="text" value="" placeholder="Enter message..." id="input_message">
+                            <span class="input-group-btn">
+                                <button class="btn btn-warning" type="submit">Submit</button>
+                            </span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script src="{{ url_for('static', filename='custom.js')}}"></script>
+  </body>
+</html>
+
