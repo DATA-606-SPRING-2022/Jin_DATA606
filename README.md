@@ -15,6 +15,7 @@
   - [Merged Data](#merged-data)
   - Notebook - <a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/6b54bfbf6db39c300e6c0e9be89f1598b5abb49e/ipynb/DATA606_Part1.ipynb">EDA Notebook Link</a>
 - [Methods](#methods)
+- [System Integration/Deployment](#system-integrationdeployment)
 - [Outcomes](#outcomes)
 - [References](#references)
 
@@ -134,11 +135,11 @@ For Collaborative Filtering, I will apply the matrix factorization method agains
 
 The above two types of filtering have their own drawbacks such as the novelty problem of Content-based Filtering and the cold start problem of Collaborative Filtering, so in reality, more robust recommender systems like hybrid recommenders are often used. I plan to build a hybrid recommender that combines Content-based Filtering and Collaborative Filtering to overcome the drawbacks and improve overall performance.
 
-### System Integration/Deployment
+## System Integration/Deployment
 
 For recommendation system integration and deployment. I would like to develop a user interface for better using experience. I will develop a Flask website and use PythonAnywhere web hosting service to host our recommender system. Next, I will develop a Chabot using DialogFlow platform to assist users for product recommendation and integrate it with the Flask website.
 
-
+The website prototype is hosted at: https://data606project.pythonanywhere.com/
 
 ## Outcomes
 #### What outcomes do you intend to achieve (better understanding of problems, tools to help solve problems, predictive analytics with practicle applications, etc)?
