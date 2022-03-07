@@ -1,5 +1,6 @@
 body,html {
   height: 100%;
+  background-color: #e8a43e;
 }
 
 .active{
@@ -101,7 +102,35 @@ body,html {
   min-height: 100vh;
 }
 
+.aboutdiv{
+    padding: 70px;
+}
+
 .bg-cover {
   background-size: cover !important;
 }
 
+@media only screen and (max-width: 900px) {
+    .aboutdiv {
+    padding: 10px;
+    }
+
+    .new-column {
+      width: 100%;
+      margin-bottom: 16px;
+      padding: 0px;
+    }
+
+    .fa {
+        padding: 5px;
+        font-size: 20px;
+        /* width: 50px; */
+        text-align: center;
+        text-decoration: none;
+        margin: 0px;
+    }
+
+    p {
+        font-size: small;
+    }
+}
