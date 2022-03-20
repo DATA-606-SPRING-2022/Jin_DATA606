@@ -1,1 +1,1 @@
-# Folder for pretrained models/matrix
+# Folder for pretrained models/matrices
