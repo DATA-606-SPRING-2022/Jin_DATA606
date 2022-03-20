@@ -121,7 +121,7 @@ To find out more insights within this dataset, we can merge the cleaned review a
   The result show that brand LintEater has the highest average rating 4.62 with over 6,000 reviews.
   Whereas Whirlpool has the rank 4 in this list, it also has the most review number and most products offered in the Appliance category. It means Whirlpool is doing great in   offering both overall product quality and quantity.
 
-* The Most Reviewed Sub Category Distributions (top 10) graphs show that 38.6% of the reviews are in the Appliances Parts sub category, and the Accessories sub category also holds 17.1% in the dataset.
+* The Most Reviewed Sub Category Distributions (top 10) graphs show that 37.9% of the reviews are in the Appliances Parts sub category, and the Accessories sub category also holds 17.1% in the dataset.
 
    <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/ac98aa47eb5d00799d13556c64786c92f516a56f/images/most_reviewed_subcategory.png" /> 
 
