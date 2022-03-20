@@ -80,14 +80,14 @@ There are a total of 602,777 review records in this category, and the dataset ha
 
 ### Product Data
 
-There are a total of 30,445 product records in this category, and the dataset has 19 different features.
+There are a total of 30,239 product records in this category, and the dataset has 19 different features.
 
 * In the product dataset, the majority of the products (64.6%) are in the Tools & Home Improvement category, and the Appliances category also holds 21.5% in the dataset. In addition, there are a total of 2,762 brands, and Whirlpool is at the rank 1 position of amount of products.
 
   <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/07e65b0c76686b1e612ef3aa0f26c56e47026c69/images/product_cat.png">
   <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/07e65b0c76686b1e612ef3aa0f26c56e47026c69/images/product_brand.png">
 
-* Below is the list of the ranking of most reviewed products and their average ratings. Among 30,445 Appliances products, there are only 30,252 products were reviewed. 
+* Below is the list of the ranking of most reviewed products and their average ratings. Among 30,239 Appliances products, there are only 30,252 products were reviewed, so there are some products are not included in the product dataset. 
 
   <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/07e65b0c76686b1e612ef3aa0f26c56e47026c69/images/product_counts.png" />
   
@@ -120,6 +120,10 @@ To find out more insights within this dataset, we can merge the cleaned review a
   
   The result show that brand LintEater has the highest average rating 4.62 with over 6,000 reviews.
   Whereas Whirlpool has the rank 4 in this list, it also has the most review number and most products offered in the Appliance category. It means Whirlpool is doing great in   offering both overall product quality and quantity.
+
+* The Most Reviewed Sub Category Distributions (top 10) graphs show that 38.6% of the reviews are in the Appliances Parts sub category, and the Accessories sub category also holds 17.1% in the dataset.
+
+   <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/ac98aa47eb5d00799d13556c64786c92f516a56f/images/most_reviewed_subcategory.png" /> 
 
 ## Methods
 #### What variables/measures do you plan to use in your analysis (variables should be tied to the questions in #3)?
