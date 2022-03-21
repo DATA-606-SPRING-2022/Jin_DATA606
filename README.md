@@ -85,7 +85,7 @@ There are a total of 30,239 product records in this category, and the dataset ha
 * In the product dataset, the majority of the products (64.7%) are in the Tools & Home Improvement category, and the Appliances category also holds 21.5% in the dataset. In addition, there are a total of 2,762 brands, and Whirlpool is at the rank 1 position of amount of products.
 
   <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/2d37430bab7fc3629760c8f44e9d256e1cfbc970/images/product_cat.png">
-  <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/07e65b0c76686b1e612ef3aa0f26c56e47026c69/images/product_brand.png">
+  <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/375921a58ca59115db8a0c8e829cff119c1a74de/images/product_brand.png">
 
 * Below is the list of the ranking of most reviewed products and their average ratings. Among 30,239 Appliances products, there are only 30,252 products were reviewed, so there are some products are not included in the product dataset. 
 
@@ -104,7 +104,7 @@ There are a total of 30,239 product records in this category, and the dataset ha
 
 * Besides, the word cloud shows that the most frequently used words for Appliances products are related to replacement, part, and model number.
 
-  <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/9b4cb651e7e430486faa681c4e48af5d358d6fc6/images/product_wordcloud.png" /> 
+  <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/375921a58ca59115db8a0c8e829cff119c1a74de/images/product_wordcloud.png" /> 
 
 ### Merged Data
 
@@ -112,7 +112,7 @@ To find out more insights within this dataset, we can merge the cleaned review a
 
 * Most Reviewed Brands Distributions (top 10) graphs show that Whirlpool products have the rank 1 position of amount of reviews. However, there are some other brands in the list that are not in the list of top 10 product numbers, which means offering more products doesn't imply more sales and revenue.
 
-  <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/d1cad2dbfd4938c5db634e5c8ad83e92b0783edc/images/most_reviewed_brand.png" /> 
+  <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/375921a58ca59115db8a0c8e829cff119c1a74de/images/most_reviewed_brand.png" /> 
 
 * Besides, the below table shows the top 10 average rating brand (reviews > 5000) in the dataset. There are many brand only have a few reviews, and their average rating will definitely be higher than other brands with more reviews, so we only consider the brands with at least 5,000 reviews for this analysis.
 
