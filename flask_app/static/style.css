@@ -3,6 +3,10 @@ body,html {
   background-color: #e8a43e;
 }
 
+.img_size{
+    width:300px;
+}
+
 .active{
     background-color: cadetblue;
 }
@@ -132,5 +136,9 @@ body,html {
 
     p {
         font-size: small;
+    }
+
+    .img_size{
+        width:150px;
     }
 }
