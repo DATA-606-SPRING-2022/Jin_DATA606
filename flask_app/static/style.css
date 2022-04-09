@@ -110,6 +110,10 @@ body,html {
     padding: 70px;
 }
 
+.product_table{
+    padding: 30px;
+}
+
 .bg-cover {
   background-size: cover !important;
 }
@@ -117,6 +121,10 @@ body,html {
 @media only screen and (max-width: 900px) {
     .aboutdiv {
     padding: 10px;
+    }
+
+    .product_table{
+    padding: 5px;
     }
 
     .new-column {

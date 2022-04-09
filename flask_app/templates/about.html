@@ -25,6 +25,12 @@
               <li {% if request.path == '/' %}class="active nav-item" {% else %}class="nav-item" {% endif %} >
                 <a class="nav-link text-white" href="/">Home</a>
               </li>
+              <li {% if request.path == '/product' %}class="active nav-item" {% else %}class="nav-item" {% endif %} >
+                <a class="nav-link text-white" href="/product">Products</a>
+              </li>
+              <li {% if request.path == '/reviewer' %}class="active nav-item" {% else %}class="nav-item" {% endif %} >
+                <a class="nav-link text-white" href="/reviewer">Customers</a>
+              </li>
               <li {% if request.path == '/about' %}class="active nav-item" {% else %}class="nav-item" {% endif %} >
                 <a class="nav-link text-white" href="/about">About</a>
               </li>
@@ -38,7 +44,7 @@
 
 </head>
 <body>
-<div class="container-fluid h-100" style="background: url(https://www.desktopbackground.org/download/1920x1080/2012/10/22/471786_professional-background-images-for-websites-all-wallpapers-new_1920x1237_h.jpg); background-size: cover; ">
+<div class="container-fluid h-100" style="background: url(https://www.desktopbackground.org/download/1920x1080/2012/10/22/471786_professional-background-images-for-websites-all-wallpapers-new_1920x1237_h.jpg); ">
     <div class="container">
 
         <div class="row">

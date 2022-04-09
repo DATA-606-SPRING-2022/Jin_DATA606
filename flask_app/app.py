@@ -19,6 +19,30 @@ def index():
     return render_template('index.html')
 
 
+@app.route('/product')
+def product():
+    SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
+    data_url = os.path.join(SITE_ROOT, "static/data", "Content_based_LDA_output.zip")
+    product_df = pd.read_csv(data_url, compression='zip')
+    display_data = product_df[['asin', 'ori_title', 'brand', 'main_cat']].sample(n = 1000)
+    product_data = display_data.values
+    return render_template('product.html', Data=product_data)
+
+
+@app.route('/reviewer')
+def reviewer():
+    SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
+    data_url = os.path.join(SITE_ROOT, "static/data", "cr_sentiment_result.zip")
+    product_df = pd.read_csv(data_url, compression='zip')
+
+    df = pd.DataFrame(product_df['reviewerID'].unique().tolist())
+    df.columns=['reviewerID']
+
+    display_data = df.sample(n=1000)
+    product_data = display_data.values
+    return render_template('reviewer.html', Data=product_data)
+
+
 @app.route('/about')
 def about():
     return render_template('about.html')
@@ -29,10 +53,19 @@ def webhook():
     req = request.get_json(silent=True, force=True)
     query_result = req.get('queryResult')
 
-    if query_result.get('action') == 'Content_based':
+    if query_result.get('action') == 'Content_based'or query_result.get('action') == 'recommender.recommender-no.recommender-no-yes.recommender-no-yes-custom':
         product_id = query_result.get('parameters').get('ProductID')
         product_id = product_id.replace(" ", "")
         rec = get_rec(product_id)
+        if product_id != '':
+            reply = {
+                "fulfillmentText": rec
+            }
+            return jsonify(reply)
+    elif query_result.get('action') == 'Collaborative' or query_result.get('action') == 'recommender.recommender-yes.recommender-yes-custom':
+        product_id = query_result.get('parameters').get('ReviewerID')
+        product_id = product_id.replace(" ", "")
+        rec = get_rec_c(product_id)
         if product_id != '':
             reply = {
                 "fulfillmentText": rec
@@ -59,8 +92,8 @@ def get_detail(id):
     id = id.lower()
 
     SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
-    data_url = os.path.join(SITE_ROOT, "static/data", "Content_based_LDA_output.csv")
-    product_df = pd.read_csv(data_url)
+    data_url = os.path.join(SITE_ROOT, "static/data", "Content_based_LDA_output.zip")
+    product_df = pd.read_csv(data_url, compression='zip')
 
     input_id = id
     if len(product_df[product_df['asin'].str.lower() == input_id]) == 0:
@@ -68,7 +101,7 @@ def get_detail(id):
     else:
         input_title = product_df[product_df['asin'].str.lower() == input_id]['ori_title'].item()
         link = '<a class="btn btn-success" href="{}" target="_blank">Find this product at Amazon</a>'.format(
-            'https://www.amazon.com/s?k=' + input_id.upper())
+            'https://www.amazon.com/dp/' + input_id.upper())
 
         if len(product_df[product_df['asin'].str.lower() == input_id]['imageURLHighRes'].tolist()[0]) == 0:
             detail = '{}, {}<br><br>{}'.format(input_id.upper(), input_title, link)
@@ -81,6 +114,37 @@ def get_detail(id):
     return detail
 
 
+def get_rec_c(id):
+    #url = 'https://github.com/JinHuiXu1991/Jin_DATA606/blob/main/cleaned_data/cleaned_amazon_product.zip?raw=true'
+    #product_df = pd.read_csv(url, compression='zip')
+    #product_df = product_df.fillna('')
+    id = id.lower()
+
+    SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
+    data_url = os.path.join(SITE_ROOT, "static/data", "cr_sentiment_result.zip")
+    product_df = pd.read_csv(data_url, compression='zip')
+
+    input_id = id
+    if len(product_df[product_df['reviewerID'].str.lower() == input_id]) == 0:
+        rec = "Couldn't find this customer, please try a different customer ID."
+    else:
+        products = sentiment_collaborative_recommender(input_id, product_df)
+
+        rec = 'Collaborative Filerting Recommender Result for customer {}: <br>'.format(input_id.upper())
+        for i, product in enumerate(products):
+            link = '<a class="" href="{}" target="_blank">{}</a>'.format(
+                'https://www.amazon.com/dp/' + product[1], product[1])
+            rec += '{}. {}, {}<br>'.format(i + 1, link, product[2])
+
+    return rec
+
+
+def sentiment_collaborative_recommender(id, df):
+    id = id.lower()
+    # return the top 10 most similar product
+    return df[df['reviewerID'].str.lower() == id].values.tolist()
+
+
 def get_rec(id):
     #url = 'https://github.com/JinHuiXu1991/Jin_DATA606/blob/main/cleaned_data/cleaned_amazon_product.zip?raw=true'
     #product_df = pd.read_csv(url, compression='zip')
@@ -88,8 +152,8 @@ def get_rec(id):
     id = id.lower()
 
     SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
-    data_url = os.path.join(SITE_ROOT, "static/data", "Content_based_LDA_output.csv")
-    product_df = pd.read_csv(data_url)
+    data_url = os.path.join(SITE_ROOT, "static/data", "Content_based_LDA_output.zip")
+    product_df = pd.read_csv(data_url, compression='zip')
 
     input_id = id
     if len(product_df[product_df['asin'].str.lower() == input_id]) == 0:
@@ -102,7 +166,7 @@ def get_rec(id):
         rec = 'Topic Modeling Recommender Result for {}, {}: <br>'.format(input_id.upper(), input_title)
         for i in range(0, 10):
             link = '<a class="" href="{}" target="_blank">{}</a>'.format(
-                'https://www.amazon.com/s?k=' + asin[i], asin[i])
+                'https://www.amazon.com/dp/' + asin[i], asin[i])
             rec += '{}. {}, {}<br>'.format(i + 1, link, title[i])
 
     return rec
