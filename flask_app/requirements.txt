@@ -6,3 +6,4 @@ pusher~=3.2.0
 itsdangerous==2.0.1
 pandas
 sklearn
+surprise

@@ -53,16 +53,19 @@ def webhook():
     req = request.get_json(silent=True, force=True)
     query_result = req.get('queryResult')
 
-    if query_result.get('action') == 'Content_based' or query_result.get('action') == 'recommender.recommender-no.recommender-no-yes.recommender-no-yes-custom':
+    if query_result.get('action') == 'Content_based' or query_result.get('action') == 'content_based_recommender':
         product_id = query_result.get('parameters').get('ProductID')
         product_id = product_id.replace(" ", "")
         rec = get_rec(product_id)
         if product_id != '':
             reply = {
-                "fulfillmentText": rec
+                "fulfillmentText": rec,
+                "diagnosticInfo": {
+                    "end_conversation": True
+                }
             }
             return jsonify(reply)
-    elif query_result.get('action') == 'Collaborative' or query_result.get('action') == 'recommender.recommender-yes.recommender-yes-custom':
+    elif query_result.get('action') == 'Collaborative':
         product_id = query_result.get('parameters').get('ReviewerID')
         product_id = product_id.replace(" ", "")
         rec = get_rec_c(product_id)
@@ -71,6 +74,36 @@ def webhook():
                 "fulfillmentText": rec
             }
             return jsonify(reply)
+    elif query_result.get('action') == 'collaborative_recommender':
+        outCnt = query_result.get('outputContexts')
+        outCnt = outCnt[2]
+        product_id = outCnt.get('parameters').get('ReviewerID')
+        product_id = product_id.replace(" ", "")
+        rec = get_rec_c(product_id)
+        if product_id != '':
+            reply = {
+                "fulfillmentText": rec
+            }
+            return jsonify(reply)
+    elif query_result.get('action') == 'hybrid_recommender':
+        outCnt = query_result.get('outputContexts')
+        outCnt = outCnt[1]
+        reviewer_id = outCnt.get('parameters').get('ReviewerID')
+        product_id = outCnt.get('parameters').get('ProductID')
+        reviewer_id = reviewer_id.replace(" ", "")
+        product_id = product_id.replace(" ", "")
+        rec = get_rec_h(reviewer_id, product_id)
+        if product_id != '':
+            reply = {
+                "fulfillmentText": rec
+            }
+            return jsonify(reply)
+    elif query_result.get('action') == 'rate_rank_recommender':
+        rec = hybrid_recommender()
+        reply = {
+            "fulfillmentText": rec
+        }
+        return jsonify(reply)
     elif query_result.get('action') == 'product.detail':
         product_id = query_result.get('parameters').get('ProductID')
         product_id = product_id.replace(" ", "")
@@ -112,6 +145,29 @@ def get_detail(id):
             detail = '{}, {}<br><br>{}<br><br>{}'.format(input_id.upper(), input_title, img, link)
 
     return detail
+
+
+def get_rec_h(reviewer_id, product_id):
+    reviewer_id = reviewer_id.lower()
+    product_id = product_id.lower()
+
+    SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
+    data_url = os.path.join(SITE_ROOT, "static/data", "final_cr_sentiment_data.zip")
+    reviewer_df = pd.read_csv(data_url, compression='zip')
+
+    SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
+    data_url = os.path.join(SITE_ROOT, "static/data", "Content_based_LDA_output.zip")
+    product_df = pd.read_csv(data_url, compression='zip')
+
+    input_id = reviewer_id
+    input_id2 = product_id
+    if len(reviewer_df[reviewer_df['reviewerID'].str.lower() == input_id]) == 0:
+        rec = "Couldn't find this customer, please try a different customer ID."
+    elif len(product_df[product_df['asin'].str.lower() == input_id2]) == 0:
+        rec = "Couldn't find any similar product, please try a different product ID."
+    else:
+        rec = hybrid_recommender(reviewerID=input_id.upper(), productID=input_id2.upper())
+    return rec
 
 
 def get_rec_c(id):
@@ -264,21 +320,15 @@ def hybrid_recommender(reviewerID="", productID=""):
     # no product ID entered and no reviewer ID entered, do rating rank
     else:
         rec = 'Recommending based on product rating rank: <br>'
-        data_url4 = os.path.join(SITE_ROOT, "static/data", "cleaned_amazon_review.zip")
-        review_df = pd.read_csv(data_url4, compression='zip')
-        merged_df = review_df.merge(product_df, on='asin', how='left')
-        product_grouped = merged_df.groupby('asin').size().reset_index(name='counts')
-        product_grouped_rating = merged_df.groupby('asin')['overall'].sum().reset_index(name='overall_sum')
-        product_grouped['rating_mean'] = product_grouped_rating['overall_sum'] / product_grouped['counts']
-
-        rating_df = product_df.merge(product_grouped, on='asin', how='left')
-        output_df = rating_df.sort_values(['rating_mean', 'counts'], ascending=[False, False]).head(10)
+        data_url4 = os.path.join(SITE_ROOT, "static/data", "product_rating_rank.zip")
+        product_rank_df = pd.read_csv(data_url4, compression='zip')
+        product_rank_df = product_rank_df.head(10)
 
         # get the product indices
-        product_indices = output_df.index.tolist()
+        product_indices = product_rank_df.index.tolist()
 
         # return the top 10 most similar product
-        asin, title = product_df['asin'].iloc[product_indices].tolist(), product_df['ori_title'].iloc[
+        asin, title = product_rank_df['asin'].iloc[product_indices].tolist(), product_rank_df['ori_title'].iloc[
             product_indices].tolist()
 
     for i in range(0, 10):
@@ -335,6 +385,7 @@ def topic_modeling_recommender(id, df, top_n=10):
     return df['asin'].iloc[product_indices].tolist(), df['ori_title'].iloc[product_indices].tolist()
 
 
+
 def detect_intent_texts(project_id, session_id, text, language_code):
     session_client = dialogflow.SessionsClient()
     session = session_client.session_path(project_id, session_id)
@@ -353,7 +404,7 @@ def send_message():
     message = request.form['message']
     project_id = os.getenv('DIALOGFLOW_PROJECT_ID')
     fulfillment_text = detect_intent_texts(project_id, "unique", message, 'en')
-    response_text = {"message":  fulfillment_text}
+    response_text = { "message":  fulfillment_text }
     return jsonify(response_text)
 
 
