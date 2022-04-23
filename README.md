@@ -21,6 +21,9 @@
   - [Hybrid Model](#hybrid-model)
   - Notebooks 
     - <a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/15ba9741beb23100e4c726368bbe66ccf28297d0/ipynb/DATA606_Part2_KnowledgeBasedRecommender.ipynb">Base Model Notebook Link</a>
+    - <a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/bde307aeb92f0ea51caebefa1cc33cc27874d058/ipynb/DATA606_Part2_ContentBasedFiltering.ipynb">Content-Based Filtering Notebook Link</a>
+    - <a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/bde307aeb92f0ea51caebefa1cc33cc27874d058/ipynb/DATA606_Part2_CollaborativeRecommender.ipynb">Collaborative Filtering Notebook Link</a>
+    - <a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/bde307aeb92f0ea51caebefa1cc33cc27874d058/ipynb/DATA606_Part3_HybridRecommender.ipynb">Hybrid Model Notebook Link</a>
 - [System Integration/Deployment](#system-integrationdeployment)
   - Recommender Website - <a href="https://data606project.pythonanywhere.com/" target="_blank">Prototype Link</a>
 - [Outcomes](#outcomes)
@@ -145,9 +148,17 @@ A base model is a simple knowledge-based recommender that takes user inputs such
 For this project, we are not deploying a model that takes user inputs like mentioned the above. Instead, we sort the product lists by rating mean and review counts for a recommendation. This is the base model we would use if the users don't have a customer ID and product ID for our recommender system.
 
 ### Content-Based Filtering
-### Collaborative Filtering
-### Hybrid Model
+<a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/bde307aeb92f0ea51caebefa1cc33cc27874d058/ipynb/DATA606_Part2_ContentBasedFiltering.ipynb">Content-Based Filtering Notebook Link</a>
 
+### Collaborative Filtering
+<a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/bde307aeb92f0ea51caebefa1cc33cc27874d058/ipynb/DATA606_Part2_CollaborativeRecommender.ipynb">Collaborative Filtering Notebook Link</a>
+
+
+### Hybrid Model
+<a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/bde307aeb92f0ea51caebefa1cc33cc27874d058/ipynb/DATA606_Part3_HybridRecommender.ipynb">Hybrid Model Notebook Link</a>
+
+    
+    
 <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/a6ee80eaec6256a12c862313fecd70ae936a65ef/images/filtering%20models.png">
 I plan to use both Content-based Filtering and Collaborative Filtering for the product recommender systems in this project. For Content-based Filtering, the variables should be the product metadata like feature, description, price, brand, and categories. For Collaborative Filtering, more variables from the review data should be used, such as overall rating, reviewText, and summary.
 
