@@ -59,7 +59,7 @@ There are a total of 602,777 review records in this category, and the dataset ha
 
 * The rating distribution graphs show that the overall ratings in this review data set are highly imbalanced, which contains more than 69% of 5 stars rating.
 
-  <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/a1a2261bc6bf8889eaa5f258c3c57e2c9d056c5e/images/review_rating.png">
+  <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/4274a5a201e957e307c31a467066e441ddbef00b/images/review_rating2.png">
 
   Thus, in the following model development, we need to keep in mind that the accuracy metric may not be useful for evaluating the machine learning models; instead, precision, recall, and F1 score values could be suitable for model evaluation.
 
@@ -75,7 +75,7 @@ There are a total of 602,777 review records in this category, and the dataset ha
 * Most of the reviews contain less than 100 words. The word counts distributions for each star rating review are similar, but if we look in to the detail of the box plot graph, we could see that negative or low star rating reviews have more texts entered. The box plot shows that the 5 stars rating reviews have the lowest interquartile range (IQR) compared to the other 4 ratings, which implies that it has average the shortest review text.
 
   <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/ee921b2d64cc56a03b8bdb0fec45b46f1f6346e8/images/review_word_distrubution.png" />
-  <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/ee921b2d64cc56a03b8bdb0fec45b46f1f6346e8/images/review_text_length_by_rating.png"/> 
+  <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/4274a5a201e957e307c31a467066e441ddbef00b/images/review_text_length_by_rating2.png"/> 
 
 
 ### Product Data
@@ -99,7 +99,7 @@ There are a total of 30,239 product records in this category, and the dataset ha
 * The product text distribution histogram and box plot show that majority of the product text is less than 1000 words. There are only a few outliers that are greater than 2000 words,  so for future NLP model development, in order to reduce the padding size, we can choose a smaller number instead.
 
   <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/9b4cb651e7e430486faa681c4e48af5d358d6fc6/images/product_text.png" />
-  <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/9b4cb651e7e430486faa681c4e48af5d358d6fc6/images/product_text_boxplot.png" /> 
+  <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/4274a5a201e957e307c31a467066e441ddbef00b/images/product_text_boxplot2.png" /> 
 
 
 * Besides, the word cloud shows that the most frequently used words for Appliances products are related to replacement, part, and model number.
@@ -112,7 +112,7 @@ To find out more insights within this dataset, we can merge the cleaned review a
 
 * Most Reviewed Brands Distributions (top 10) graphs show that Whirlpool products have the rank 1 position of amount of reviews. However, there are some other brands in the list that are not in the list of top 10 product numbers, which means offering more products doesn't imply more sales and revenue.
 
-  <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/375921a58ca59115db8a0c8e829cff119c1a74de/images/most_reviewed_brand.png" /> 
+  <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/4274a5a201e957e307c31a467066e441ddbef00b/images/most_reviewed_brand2.png" /> 
 
 * Besides, the below table shows the top 10 average rating brand (reviews > 5000) in the dataset. There are many brand only have a few reviews, and their average rating will definitely be higher than other brands with more reviews, so we only consider the brands with at least 5,000 reviews for this analysis.
 
@@ -121,9 +121,13 @@ To find out more insights within this dataset, we can merge the cleaned review a
   The result show that brand LintEater has the highest average rating 4.62 with over 6,000 reviews.
   Whereas Whirlpool has the rank 4 in this list, it also has the most review number and most products offered in the Appliance category. It means Whirlpool is doing great in   offering both overall product quality and quantity.
 
+* This graph shows that LintEater has the best review per product ratio in the dataset. And most of the brands are not in the top ranking of the number of products, which again proves that offering more products doesn't imply more sales and revenue.
+
+  <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/4274a5a201e957e307c31a467066e441ddbef00b/images/Highest_ReviewProduct_Ratio_Brands.png" /> 
+
 * The Most Reviewed Sub Category Distributions (top 10) graphs show that 37.9% of the reviews are in the Appliances Parts sub category, and the Accessories sub category also holds 17.1% in the dataset.
 
-   <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/ac98aa47eb5d00799d13556c64786c92f516a56f/images/most_reviewed_subcategory.png" /> 
+   <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/4274a5a201e957e307c31a467066e441ddbef00b/images/most_reviewed_subcategory2.png" /> 
 
 ## Methods
 #### What variables/measures do you plan to use in your analysis (variables should be tied to the questions in #3)?
