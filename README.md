@@ -15,6 +15,12 @@
   - [Merged Data](#merged-data)
   - Notebook - <a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/6b54bfbf6db39c300e6c0e9be89f1598b5abb49e/ipynb/DATA606_Part1.ipynb">EDA Notebook Link</a>
 - [Methods](#methods)
+  - [Base Model](#base-model) 
+  - [Content-Based Filtering](#content-based-filtering)
+  - [Collaborative Filtering](#collaborative-filtering)
+  - [Hybrid Model](#hybrid-model)
+  - Notebooks 
+    - <a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/15ba9741beb23100e4c726368bbe66ccf28297d0/ipynb/DATA606_Part2_KnowledgeBasedRecommender.ipynb">Base Model Notebook Link</a>
 - [System Integration/Deployment](#system-integrationdeployment)
   - Recommender Website - <a href="https://data606project.pythonanywhere.com/" target="_blank">Prototype Link</a>
 - [Outcomes](#outcomes)
@@ -130,7 +136,18 @@ To find out more insights within this dataset, we can merge the cleaned review a
    <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/4274a5a201e957e307c31a467066e441ddbef00b/images/most_reviewed_subcategory2.png" /> 
 
 ## Methods
-#### What variables/measures do you plan to use in your analysis (variables should be tied to the questions in #3)?
+
+### Base Model 
+<a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/15ba9741beb23100e4c726368bbe66ccf28297d0/ipynb/DATA606_Part2_KnowledgeBasedRecommender.ipynb">Base Model Notebook Link</a>
+
+A base model is a simple knowledge-based recommender that takes user inputs such as product category, brand, release year, and targeted price to search for matching products. It usually doesn't leverage machine learning to provide recommendations. 
+
+For this project, we are not deploying a model that takes user inputs like mentioned the above. Instead, we sort the product lists by rating mean and review counts for a recommendation. This is the base model we would use if the users don't have a customer ID and product ID for our recommender system.
+
+### Content-Based Filtering
+### Collaborative Filtering
+### Hybrid Model
+
 <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/a6ee80eaec6256a12c862313fecd70ae936a65ef/images/filtering%20models.png">
 I plan to use both Content-based Filtering and Collaborative Filtering for the product recommender systems in this project. For Content-based Filtering, the variables should be the product metadata like feature, description, price, brand, and categories. For Collaborative Filtering, more variables from the review data should be used, such as overall rating, reviewText, and summary.
 
