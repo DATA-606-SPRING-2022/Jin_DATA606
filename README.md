@@ -1,11 +1,15 @@
 # Amazon Product Recommender Systems
-### Jin Hui Xu
+## Author: Jin Hui Xu
 ### DATA606 Capstone Project
 
+## Presentation
+  - Presentation Slides
+    - <a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/7061b3699f20985cf305a17c26b089fa19909fe2/presentation/Project_Presentation_Final.pptx">PPT</a>
+    - <a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/7061b3699f20985cf305a17c26b089fa19909fe2/presentation/Project_Presentation_Final.pdf">PDF</a>
+  - Video presentation 
+    - EDA - <a href="https://youtu.be/sDxbj2RG-58">Youtube Presentation Link</a>
+    - Final - <a href="https://youtu.be/sDxbj2RG-58">Youtube Presentation Link</a>
 ## Contents
-- Presentation
-  - PowerPoint presentation - <a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/05145b7b246b2f9bbba06f11ce1d5c85db1315ce/presentation/Project_Presentation_EDA_v1.1.pptx">PowerPoint Presentation Link</a>
-  - Video presentation - <a href="https://youtu.be/sDxbj2RG-58">Youtube Presentation Link</a>
 - [Introduction](#introduction)
 - [Research Questions](#research-questions)
 - [Data](#data)
