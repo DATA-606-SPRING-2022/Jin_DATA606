@@ -151,8 +151,9 @@ For this project, we are not deploying a model that takes user inputs like menti
 <a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/939699dc09932f34b6968b0dda38caa554c6bafe/ipynb/DATA606_Part2_ContentBasedFiltering.ipynb">Content-Based Filtering Notebook Link</a>
 
 The idea of content-based filtering is to find the similarity products based on either metadata or product description. The most feasible approach is to apply the cosine similarity method against the textual data to find the most similar products. I have applied this approach against both product description and metadata, and their recommendation results are very convincing. 
-  <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/a6ee80eaec6256a12c862313fecd70ae936a65ef/images/filtering%20models.png">
-  <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/a6ee80eaec6256a12c862313fecd70ae936a65ef/images/filtering%20models.png">
+
+  <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/092e30589bd38cf5086afb1242981f5fbc016e2b/images/content_based_result.png">
+  <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/092e30589bd38cf5086afb1242981f5fbc016e2b/images/content_based_result2.png">
 
 However, this approach is not a good fit for Web API because the matrix size is too large for local RAM or web hosting service storage and RAM, so we have to try using another method for Web API deployment for content-based filtering.
 
@@ -160,8 +161,9 @@ The topic modeling approach could be an alternative solution. Instead of computi
 
 To find out how many topics exist in our product dataset, coherence values analysis is applied and the output shows that topic number 9 has the best coherence score, so we will use k=9 for the final LDA model.
 
-  <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/a6ee80eaec6256a12c862313fecd70ae936a65ef/images/filtering%20models.png">
-
+  <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/092e30589bd38cf5086afb1242981f5fbc016e2b/images/LDA_coherence_scores.png">
+  <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/092e30589bd38cf5086afb1242981f5fbc016e2b/images/LDA_result.png">
+  
 The LDA model has a Coherence Score: 0.606, and The LDA topic modeling recommender did a fairly good job. However, the cosine similarity models are performing better and generating more concise recommendations. Since it is just adding extra topic number and probability columns to the dataset, the data file size would be much smaller than the cosine similarity model. Thus, we use the LDA model output for Web API depoyment.
 
 ### Collaborative Filtering
