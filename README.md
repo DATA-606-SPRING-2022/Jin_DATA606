@@ -27,6 +27,9 @@
 - [System Integration/Deployment](#system-integrationdeployment)
   - Recommender Chatbot Website - <a href="https://data606project.pythonanywhere.com/" target="_blank">Link</a>
 - [Conclusion](#conclusion)
+  - [Outcomes](#outcomes)
+  - [Limitation](#limitation)
+  - [Future Research](#future-research)
 - [References](#references)
 
 ## Introduction
@@ -230,10 +233,31 @@ The recommendation chatbot website is hosted at: https://data606project.pythonan
   <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/a33a54b890393936b50ff188b1c77e4d45b3c37d/images/chatbot_site.png" /> 
 
 ## Conclusion
-#### What outcomes do you intend to achieve (better understanding of problems, tools to help solve problems, predictive analytics with practicle applications, etc)?
+### Outcomes
+Through the research process for this project, I have developed a comprehensive product recommender system that can accurately predict customer’s preferences.
 
-I intend to achieve through this project is to develop product recommender systems/models that can accurately predict customers' preferences, identify the most useful characteristics to promote certain products to customers, understand the role of text data in recommender systems, provide a website and Chatbot to assist amazon users to make purchase decisions, and provide a comprehensive report of recommender systems for the business owners.
+By the EDA and machine learning model development, we can conclude that there is no optimal recommendation algorithm/method, all algorithms are practical but also come with their own drawback. That’s why in real-world scenarios, a hybrid model is more likely to be used. 
 
+However, we find that the most useful characteristics to promote products are based on what recommendation method we use. For content-based filtering, product description is the key feature. For collaborative filtering, review rating is the most important factor.
+
+Besides, textual data plays a significant role in recommender systems, either content-based or collaborative filtering can leverage textual data and its sentiment to generate precise recommendations. 
+
+And to offer a better user experience, I kinda exploded the software and chatbot development, and build a integrated system to assist amazon users to make purchase decisions.
+
+Overall, this project gives a comprehensive report of how recommender systems work. It demonstrates every aspect from collecting data, EDA, machine learning, and system deployment, and hopefully, it can help any audience better understand why and how to create such a system.
+
+### Limitation
+There are some limitation for this project. 
+  - One of them is the data we used, it is only a subset of the original dataset, so the recommender systems will not work for other products in the dataset.
+  - Another one is the deployed machine learning models. The optimal models are not able to be deployed due to the limited budget and resources, otherwise, users can get more accurate recommendation results.
+  - And the developed recommender system is an offline recommender which means it cannot generate recommendations for any new customer and product that doesn’t originally exist in the dataset, and it will not update synchronously with new purchases.
+
+### Future Research
+Since we have some limitations for this project, we can extend this project by researching in these directions.
+  - One future research option could be to utilize the entire dataset to develop a cross-domain recommender system, it will definitely require more computing resources for handling big data, but the final recommender system can be powerful to recommend any product on the Amazon website.
+  - Another research direction is to explode online recommender system approaches, one could be session-based recommender system which rely on the user’s most recent interactions rather than on the user’s historical preferences. Another one could be to utilize reinforcement learning to train the recommendation models based on the most recent user interactions, so the system could be updated synchronously to generate more accurate results. 
+
+  
 ## References
 Jianmo Ni, Jiacheng Li, Julian McAuley
 Empirical Methods in Natural Language Processing (EMNLP), 2019 
