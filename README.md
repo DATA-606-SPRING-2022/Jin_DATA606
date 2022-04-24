@@ -201,7 +201,7 @@ Of course, if either ID is missing from the input, our system can handle it by c
 
 As you can see, the recommendation result shows that the hybrid model is suggesting more products that are similar to the product ID B0001YH10C for customer ID A1CY6CQC5HPQGL because it takes individual advantage of content-based and collaborative filtering.
 
-  <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/a6ee80eaec6256a12c862313fecd70ae936a65ef/images/filtering%20models.png">
+  <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/7e9906a5566c32ca33e7a64cd1bc0803a91b33a6/images/hybrid_result.png">
 
 ## System Integration/Deployment
 
