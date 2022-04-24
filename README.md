@@ -199,7 +199,7 @@ The goal of our Hybrid Model is to generate recommendations based on both conten
 
 Of course, if either ID is missing from the input, our system can handle it by calling its "Child Models" to generate recommendations respectively. If no input IDs are entered, then it will use our base model for the recommendation.
 
-As you can see, the recommendation result shows that the hybrid model is suggesting more products that are similar to the product ID B0001YH10C for customer ID A1CY6CQC5HPQGL
+As you can see, the recommendation result shows that the hybrid model is suggesting more products that are similar to the product ID B0001YH10C for customer ID A1CY6CQC5HPQGL because it takes individual advantage of content-based and collaborative filtering.
 
   <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/a6ee80eaec6256a12c862313fecd70ae936a65ef/images/filtering%20models.png">
 
