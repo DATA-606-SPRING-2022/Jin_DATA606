@@ -26,8 +26,8 @@
   - Notebooks 
     - <a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/15ba9741beb23100e4c726368bbe66ccf28297d0/ipynb/DATA606_Part2_KnowledgeBasedRecommender.ipynb">Base Model Notebook Link</a>
     - <a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/939699dc09932f34b6968b0dda38caa554c6bafe/ipynb/DATA606_Part2_ContentBasedFiltering.ipynb">Content-Based Filtering Notebook Link</a>
-    - <a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/fed9ede8f383579e73fa2f00a5cd97448c168675/ipynb/DATA606_Part2_CollaborativeRecommender.ipynb">Collaborative Filtering Notebook Link</a>
-    - <a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/1fefb0beb0018de01935edfdac798edd2736938e/ipynb/DATA606_Part3_HybridRecommender.ipynb">Hybrid Model Notebook Link</a>
+    - <a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/e7bc863b8be249cc1551d1c6650f31ecdc57fecc/ipynb/DATA606_Part2_CollaborativeRecommender.ipynb">Collaborative Filtering Notebook Link</a>
+    - <a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/e7bc863b8be249cc1551d1c6650f31ecdc57fecc/ipynb/DATA606_Part3_HybridRecommender.ipynb">Hybrid Model Notebook Link</a>
 - [System Integration/Deployment](#system-integrationdeployment)
   - Recommender Chatbot Website - <a href="https://data606project.pythonanywhere.com/" target="_blank">Link</a>
 - [Conclusion](#conclusion)
@@ -174,7 +174,7 @@ To find out how many topics exist in our product dataset, coherence values analy
 The LDA model has a Coherence Score: 0.606, and The LDA topic modeling recommender did a fairly good job. However, the cosine similarity models are performing better and generating more concise recommendations. Since it is just adding extra topic number and probability columns to the dataset, the data file size would be much smaller than the cosine similarity model. Thus, we use the LDA model output for Web API depoyment.
 
 ### Collaborative Filtering
-<a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/fed9ede8f383579e73fa2f00a5cd97448c168675/ipynb/DATA606_Part2_CollaborativeRecommender.ipynb">Collaborative Filtering Notebook Link</a>
+<a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/e7bc863b8be249cc1551d1c6650f31ecdc57fecc/ipynb/DATA606_Part2_CollaborativeRecommender.ipynb">Collaborative Filtering Notebook Link</a>
 
 Collaborative methods for recommender systems are methods based on past interactions recorded between users and items to generate new recommendations. The past user-item interactions represent the bases to detect similar users and/or similar items and to make predictions based on estimated proximities.
 
@@ -196,7 +196,7 @@ After the algorithm is picked, I have performed some parameter tuning using Grid
   <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/0838a59fc9dff663efb275ee5854c71190ab4435/images/SVD_results.png">
 
 ### Hybrid Model
-<a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/1fefb0beb0018de01935edfdac798edd2736938e/ipynb/DATA606_Part3_HybridRecommender.ipynb">Hybrid Model Notebook Link</a>
+<a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/e7bc863b8be249cc1551d1c6650f31ecdc57fecc/ipynb/DATA606_Part3_HybridRecommender.ipynb">Hybrid Model Notebook Link</a>
 
   <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/a6ee80eaec6256a12c862313fecd70ae936a65ef/images/filtering%20models.png">
 
