@@ -25,7 +25,7 @@
     - <a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/fed9ede8f383579e73fa2f00a5cd97448c168675/ipynb/DATA606_Part2_CollaborativeRecommender.ipynb">Collaborative Filtering Notebook Link</a>
     - <a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/1fefb0beb0018de01935edfdac798edd2736938e/ipynb/DATA606_Part3_HybridRecommender.ipynb">Hybrid Model Notebook Link</a>
 - [System Integration/Deployment](#system-integrationdeployment)
-  - Recommender Website - <a href="https://data606project.pythonanywhere.com/" target="_blank">Prototype Link</a>
+  - Recommender Chatbot Website - <a href="https://data606project.pythonanywhere.com/" target="_blank">Link</a>
 - [Outcomes](#outcomes)
 - [References](#references)
 
@@ -205,11 +205,15 @@ As you can see, the recommendation result shows that the hybrid model is suggest
 
 ## System Integration/Deployment
 
-For recommendation system integration and deployment. I would like to develop a user interface for better using experience. I will develop a Flask website and use PythonAnywhere web hosting service to host our recommender system. Next, I will develop a Chabot using DialogFlow platform to assist users for product recommendation and integrate it with the Flask website.
+For recommendation system deployment, a user interface was developed by integrating with multiple platforms and servers. This section will illustrate the system integration details and provide a live recommendation website at the end.
 
-The website prototype is hosted at: https://data606project.pythonanywhere.com/
+  <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/c1cf47c7c051d36be2c7c63f0d5a7ab17689e830/images/system%20architecture%20diagram.drawio.png" />
+  
+  <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/c1cf47c7c051d36be2c7c63f0d5a7ab17689e830/images/chat%20flow.drawio.png" />
+  
+The recommendation chatbot website is hosted at: https://data606project.pythonanywhere.com/
 
-<img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/5372ca212bb22ae73cb18cda93816a1cee8dd288/images/flask_prototype.png" /> 
+  <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/5372ca212bb22ae73cb18cda93816a1cee8dd288/images/flask_prototype.png" /> 
 
 ## Outcomes
 #### What outcomes do you intend to achieve (better understanding of problems, tools to help solve problems, predictive analytics with practicle applications, etc)?
