@@ -213,7 +213,7 @@ For recommendation system deployment, a user interface was developed by integrat
   
 The recommendation chatbot website is hosted at: https://data606project.pythonanywhere.com/
 
-  <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/5372ca212bb22ae73cb18cda93816a1cee8dd288/images/flask_prototype.png" /> 
+  <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/a33a54b890393936b50ff188b1c77e4d45b3c37d/images/chatbot_site.png" /> 
 
 ## Outcomes
 #### What outcomes do you intend to achieve (better understanding of problems, tools to help solve problems, predictive analytics with practicle applications, etc)?
