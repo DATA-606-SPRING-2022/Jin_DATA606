@@ -23,7 +23,7 @@
     - <a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/15ba9741beb23100e4c726368bbe66ccf28297d0/ipynb/DATA606_Part2_KnowledgeBasedRecommender.ipynb">Base Model Notebook Link</a>
     - <a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/939699dc09932f34b6968b0dda38caa554c6bafe/ipynb/DATA606_Part2_ContentBasedFiltering.ipynb">Content-Based Filtering Notebook Link</a>
     - <a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/fed9ede8f383579e73fa2f00a5cd97448c168675/ipynb/DATA606_Part2_CollaborativeRecommender.ipynb">Collaborative Filtering Notebook Link</a>
-    - <a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/bde307aeb92f0ea51caebefa1cc33cc27874d058/ipynb/DATA606_Part3_HybridRecommender.ipynb">Hybrid Model Notebook Link</a>
+    - <a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/1fefb0beb0018de01935edfdac798edd2736938e/ipynb/DATA606_Part3_HybridRecommender.ipynb">Hybrid Model Notebook Link</a>
 - [System Integration/Deployment](#system-integrationdeployment)
   - Recommender Website - <a href="https://data606project.pythonanywhere.com/" target="_blank">Prototype Link</a>
 - [Outcomes](#outcomes)
@@ -189,11 +189,19 @@ After the algorithm is picked, I have performed some parameter tuning using Grid
   <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/0838a59fc9dff663efb275ee5854c71190ab4435/images/SVD_results.png">
 
 ### Hybrid Model
-<a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/bde307aeb92f0ea51caebefa1cc33cc27874d058/ipynb/DATA606_Part3_HybridRecommender.ipynb">Hybrid Model Notebook Link</a>
+<a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/1fefb0beb0018de01935edfdac798edd2736938e/ipynb/DATA606_Part3_HybridRecommender.ipynb">Hybrid Model Notebook Link</a>
 
   <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/a6ee80eaec6256a12c862313fecd70ae936a65ef/images/filtering%20models.png">
 
 The above two types of filtering have their own drawbacks such as the novelty problem of Content-based Filtering and the cold start problem of Collaborative Filtering, so in reality, more robust recommender systems like hybrid recommenders are often used. I have built a hybrid recommender that combines Content-based Filtering and Collaborative Filtering to overcome the drawbacks and improve overall performance.
+
+The goal of our Hybrid Model is to generate recommendations based on both content-based filtering and collaborative filtering. It will take both reviewer ID and product ID as input, and first get 100 recommendation results from the content-based filtering model, then input the reviewer ID and the recommended product IDs from the Content-based filtering model to the Collaborative filtering model. This model will generate recommendations that meet product similarities and customer personality as much as possible.
+
+Of course, if either ID is missing from the input, our system can handle it by calling its "Child Models" to generate recommendations respectively. If no input IDs are entered, then it will use our base model for the recommendation.
+
+As you can see, the recommendation result shows that the hybrid model is suggesting more products that are similar to the product ID B0001YH10C for customer ID A1CY6CQC5HPQGL
+
+  <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/a6ee80eaec6256a12c862313fecd70ae936a65ef/images/filtering%20models.png">
 
 ## System Integration/Deployment
 
