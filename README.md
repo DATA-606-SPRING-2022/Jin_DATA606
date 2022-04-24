@@ -26,7 +26,7 @@
     - <a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/1fefb0beb0018de01935edfdac798edd2736938e/ipynb/DATA606_Part3_HybridRecommender.ipynb">Hybrid Model Notebook Link</a>
 - [System Integration/Deployment](#system-integrationdeployment)
   - Recommender Chatbot Website - <a href="https://data606project.pythonanywhere.com/" target="_blank">Link</a>
-- [Outcomes](#outcomes)
+- [Conclusion](#conclusion)
 - [References](#references)
 
 ## Introduction
@@ -207,15 +207,29 @@ As you can see, the recommendation result shows that the hybrid model is suggest
 
 For recommendation system deployment, a user interface was developed by integrating with multiple platforms and servers. This section will illustrate the system integration details and provide a live recommendation website at the end.
 
+First of all, let’s introduce some key components of the system. 
+  - The first one is the web hosting service that runs our web application and recommendation models. I chose PythonAnywhere because it is free and it provides the ability to run and execute Python codes within the environment from any machine, any location. The only drawback is free server has limited computing and storage power.
+  - The second tool is the chatbot development platform that connect user input with recommendation models. I chose DialogFlow because it is powered by Google’s machine learning, easy to use, and supports fulfillment.
+
+So now we have our machine learning model, web application, web hosting service, and chatbot ready, let’s integrate them into a functioning system. This is a system architecture diagram for this project, it shows the interaction flow between each component and their roles in this integrated system.
+
   <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/c1cf47c7c051d36be2c7c63f0d5a7ab17689e830/images/system%20architecture%20diagram.drawio.png" />
   
+Start with the backend where our core components reside on. We have two web servers, one is hosting our web application, which handles message transmission with Dialogflow. another one is hosting our webhook API for handling recommendation model-related responses. Then we have a chatbot in the middle to connect these two web servers. The chatbot utilizes Google Cloud Platform for external use and it handles conversation and collects user inputs. Normally, the standalone chatbot can handle the regular conversation, but if any chat responses require machine learning results, it will send a request with user input IDs to our web API. Then our web API will run the model and send back the result. Finally, all chat responses will go through our first web server and be displayed on the frontend to the user. 
+
+The architecture is straightforward, but our chatbot doesn’t know when to call our web API unless we tell it to do so, so the next step is to design our chatbot conversation flow to set conditions for collecting the necessary input from the users for calling our recommendation models.
+
+This is the chatbot conversation flow chart for the project, it bascially illustrate how the chatbot help us to collect information through the conversation. 
+
   <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/c1cf47c7c051d36be2c7c63f0d5a7ab17689e830/images/chat%20flow.drawio.png" />
+  
+In this chart, the orange color represents users and the black color represents the chatbot agent. If users ask for recommendations, the agent will ask if they have a customer ID, if they respond yes, then the agent will take the left path and vice versa. With the subsequent similar conversations, the agent will collect the necessary customer ID and product ID and store them as parameters. After the information is collected, the chatbot will send those parameters to our machine learning models Web API, and the API will generate recommendations using the appropriate model based on the input data.
   
 The recommendation chatbot website is hosted at: https://data606project.pythonanywhere.com/
 
   <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/a33a54b890393936b50ff188b1c77e4d45b3c37d/images/chatbot_site.png" /> 
 
-## Outcomes
+## Conclusion
 #### What outcomes do you intend to achieve (better understanding of problems, tools to help solve problems, predictive analytics with practicle applications, etc)?
 
 I intend to achieve through this project is to develop product recommender systems/models that can accurately predict customers' preferences, identify the most useful characteristics to promote certain products to customers, understand the role of text data in recommender systems, provide a website and Chatbot to assist amazon users to make purchase decisions, and provide a comprehensive report of recommender systems for the business owners.
