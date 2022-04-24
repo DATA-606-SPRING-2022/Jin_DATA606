@@ -22,8 +22,8 @@
   - Notebooks 
     - <a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/15ba9741beb23100e4c726368bbe66ccf28297d0/ipynb/DATA606_Part2_KnowledgeBasedRecommender.ipynb">Base Model Notebook Link</a>
     - <a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/939699dc09932f34b6968b0dda38caa554c6bafe/ipynb/DATA606_Part2_ContentBasedFiltering.ipynb">Content-Based Filtering Notebook Link</a>
-    - <a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/bde307aeb92f0ea51caebefa1cc33cc27874d058/ipynb/DATA606_Part2_CollaborativeRecommender.ipynb">Collaborative Filtering Notebook Link</a>
-    - <a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/bde307aeb92f0ea51caebefa1cc33cc27874d058/ipynb/DATA606_Part3_HybridRecommender.ipynb">Hybrid Model Notebook Link</a>
+    - <a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/fed9ede8f383579e73fa2f00a5cd97448c168675/ipynb/DATA606_Part2_CollaborativeRecommender.ipynb">Collaborative Filtering Notebook Link</a>
+    - <a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/1fefb0beb0018de01935edfdac798edd2736938e/ipynb/DATA606_Part3_HybridRecommender.ipynb">Hybrid Model Notebook Link</a>
 - [System Integration/Deployment](#system-integrationdeployment)
   - Recommender Website - <a href="https://data606project.pythonanywhere.com/" target="_blank">Prototype Link</a>
 - [Outcomes](#outcomes)
@@ -167,26 +167,41 @@ To find out how many topics exist in our product dataset, coherence values analy
 The LDA model has a Coherence Score: 0.606, and The LDA topic modeling recommender did a fairly good job. However, the cosine similarity models are performing better and generating more concise recommendations. Since it is just adding extra topic number and probability columns to the dataset, the data file size would be much smaller than the cosine similarity model. Thus, we use the LDA model output for Web API depoyment.
 
 ### Collaborative Filtering
-<a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/bde307aeb92f0ea51caebefa1cc33cc27874d058/ipynb/DATA606_Part2_CollaborativeRecommender.ipynb">Collaborative Filtering Notebook Link</a>
+<a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/fed9ede8f383579e73fa2f00a5cd97448c168675/ipynb/DATA606_Part2_CollaborativeRecommender.ipynb">Collaborative Filtering Notebook Link</a>
 
+Collaborative methods for recommender systems are methods based on past interactions recorded between users and items to generate new recommendations. The past user-item interactions represent the bases to detect similar users and/or similar items and to make predictions based on estimated proximities.
+
+The class of collaborative filtering algorithms is divided into two sub-categories called memory-based and model-based approaches:
+  - Memory-based approaches directly work with values of recorded interactions, assuming no model, and are essentially based on nearest neighbors search or KNN (i.e., find the closest users from a referenced user and suggest the most popular items among these neighbors)
+  - Model-based approaches assume there is an underlying “generative” model that explains the user-item interactions and tries to identify it in order to make new predictions
+
+For training the collaborative filtering model, we only consider the customer with at least 3 reviews in our dataset. This will increase the recommendation output accuracy. On the left-hand side, the graph shows the rating distribution for our selected training data. Since one of the objectives of this project is to find out if textual data can improve recommender systems' performance, I have also performed sentiment analysis against the review text and converted the sentiment polarity score into the same range as the review rating. The graph on the right shows that based on the sentiment of the review text, the rating distribution should not be that imbalanced. Becasue of the sentiment data is tend to be more normally distributed, I choose to use it for the machine learning models instead of the original rating.
+
+  <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/0838a59fc9dff663efb275ee5854c71190ab4435/images/compare.png">
+  
+Surprise is a good Python library to build collaborative recommendation system for both memory based and model based models. I have applied all the algorithms supported by Surprise and developed a deep neural network by TensorFlow and Keras to compare their performance results. The result table shows that SVDpp and SVD have a very close performance, but the training and testing time of SVDpp is longer than SVD. Thus, the SVD is our choice for the collaborative filtering recommendation model deployment.
+
+  <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/0838a59fc9dff663efb275ee5854c71190ab4435/images/collaborative_ml_result.png">
+
+After the algorithm is picked, I have performed some parameter tuning using GridSearchCV to improve the performance as much as possible, and the final SVD model for deployment has a average 0.56 rmse testing score which is the best among all the collaborative filtering models. And the collaborative filtering model will take a reviewer ID as input to generate recommendation like this. Unlike content-based filtering, the results are personalized specifically for this customer.
+
+  <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/0838a59fc9dff663efb275ee5854c71190ab4435/images/final_SVD_rmse.png">
+  <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/0838a59fc9dff663efb275ee5854c71190ab4435/images/SVD_results.png">
 
 ### Hybrid Model
-<a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/bde307aeb92f0ea51caebefa1cc33cc27874d058/ipynb/DATA606_Part3_HybridRecommender.ipynb">Hybrid Model Notebook Link</a>
+<a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/1fefb0beb0018de01935edfdac798edd2736938e/ipynb/DATA606_Part3_HybridRecommender.ipynb">Hybrid Model Notebook Link</a>
 
-    
-    
-<img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/a6ee80eaec6256a12c862313fecd70ae936a65ef/images/filtering%20models.png">
-I plan to use both Content-based Filtering and Collaborative Filtering for the product recommender systems in this project. For Content-based Filtering, the variables should be the product metadata like feature, description, price, brand, and categories. For Collaborative Filtering, more variables from the review data should be used, such as overall rating, reviewText, and summary.
+  <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/a6ee80eaec6256a12c862313fecd70ae936a65ef/images/filtering%20models.png">
 
-#### What kinds of techniques/models do you plan to use (for example, clustering, NLP, ARIMA, etc.)? How do you plan to develop/apply ML and how you evaluate/compare the performance of the models?
+The above two types of filtering have their own drawbacks such as the novelty problem of Content-based Filtering and the cold start problem of Collaborative Filtering, so in reality, more robust recommender systems like hybrid recommenders are often used. I have built a hybrid recommender that combines Content-based Filtering and Collaborative Filtering to overcome the drawbacks and improve overall performance.
 
-I plan to use the Cosine similarity model, Matrix Factorization, KNN. Besides, NLP models like TF-IDF, Naive Bayes, LSTM could be used against the text data. For evaluate/compare the performance of the models, I plan to apply Root Mean Squared Error (RMSE) and Decision support metrics (Precision, Recall, F1).
+The goal of our Hybrid Model is to generate recommendations based on both content-based filtering and collaborative filtering. It will take both reviewer ID and product ID as input, and first get 100 recommendation results from the content-based filtering model, then input the reviewer ID and the recommended product IDs from the Content-based filtering model to the Collaborative filtering model. This model will generate recommendations that meet product similarities and customer personality as much as possible.
 
-For Content-based Filtering, I will apply the cosine similarity method against the product metadata to identify the similar products for the given one. The main feature that will be used for this model is from the product metadata like description, price, salesRank, brand, categories, and product features. Since some of them are textual data, NLP techniques like tokenization and TF-IDF vectorization will be applied. 
+Of course, if either ID is missing from the input, our system can handle it by calling its "Child Models" to generate recommendations respectively. If no input IDs are entered, then it will use our base model for the recommendation.
 
-For Collaborative Filtering, I will apply the matrix factorization method against the review data. The main feature that will be used for this approach is from the review data like user id, product id, and the rating score. To perform matrix analysis, the cosine similarity method could be applied again, and several machine learning algorithms will be used such as KNN and Singular value decomposition (SVD). KNN can group users into a cluster and only consider the same cluster user for product recommendation. SVD can break down a matrix into the product of a few smaller matrices to reveal the user connections and to discover relationships between items. Moreover, deep learning techniques could also be applied for Collborative Filtering, Neural Network method can take the user-item matrix or review textual data for predicting a score for recommending.
+As you can see, the recommendation result shows that the hybrid model is suggesting more products that are similar to the product ID B0001YH10C for customer ID A1CY6CQC5HPQGL because it takes individual advantage of content-based and collaborative filtering.
 
-The above two types of filtering have their own drawbacks such as the novelty problem of Content-based Filtering and the cold start problem of Collaborative Filtering, so in reality, more robust recommender systems like hybrid recommenders are often used. I plan to build a hybrid recommender that combines Content-based Filtering and Collaborative Filtering to overcome the drawbacks and improve overall performance.
+  <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/a6ee80eaec6256a12c862313fecd70ae936a65ef/images/filtering%20models.png">
 
 ## System Integration/Deployment
 
