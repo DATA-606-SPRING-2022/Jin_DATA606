@@ -171,7 +171,7 @@ To find out how many topics exist in our product dataset, coherence values analy
   <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/092e30589bd38cf5086afb1242981f5fbc016e2b/images/LDA_coherence_scores.png">
   <img src="https://github.com/JinHuiXu1991/Jin_DATA606/blob/092e30589bd38cf5086afb1242981f5fbc016e2b/images/LDA_result.png">
   
-The LDA model has a Coherence Score: 0.606, and The LDA topic modeling recommender did a fairly good job. However, the cosine similarity models are performing better and generating more concise recommendations. Since it is just adding extra topic number and probability columns to the dataset, the data file size would be much smaller than the cosine similarity model. Thus, we use the LDA model output for Web API depoyment.
+The LDA model has a Coherence Score: 0.606, and The LDA topic modeling recommender did a fairly good job. Compare to the cosine similarity models, it is generating less precise recommendations, but the data file size would be much smaller because it is just adding extra topic number and probability columns to the dataset. Thus, we use the LDA model output for Web API depoyment.
 
 ### Collaborative Filtering
 <a href="https://github.com/JinHuiXu1991/Jin_DATA606/blob/e7bc863b8be249cc1551d1c6650f31ecdc57fecc/ipynb/DATA606_Part2_CollaborativeRecommender.ipynb">Collaborative Filtering Notebook Link</a>
