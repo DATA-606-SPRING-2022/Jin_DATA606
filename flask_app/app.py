@@ -250,7 +250,11 @@ def collaborative_SVD_recommender(predictions, product_df, top_num=10, LDA_resul
     for uid, user_ratings in top_n.items():
       result = [iid for (iid, _) in user_ratings]
 
-    return result, product_df[product_df['asin'].isin(result)]['ori_title'].tolist()
+    result_title = []
+    for asin in result:
+      result_title.append(product_df[product_df['asin'] == asin]['ori_title'].item())
+
+    return result, result_title
 
 
 def sentiment_collaborative_recommender(id, df):
